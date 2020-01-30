@@ -1,0 +1,32 @@
+type Facility @model {
+  id: ID!
+  facilityId: String!
+  facilityType: String!
+  currentOwner: String!
+  currentOwnerContact: String!
+  previousOwner: String
+  previousOwnerContact: String
+  createdAt: String!
+  updateAt: String
+  lastPaidAt: String
+  nextDueDate: String
+  facilityAmount: String
+  amountPaid: String
+  paymentRecords: [PaymentRecord] @connection(name: "FacilityPaymentRecords")
+}
+type PaymentRecord @model {
+  id: ID!
+  paidAt: String!
+  monthsPaid: String!
+  nextDueDate: String!
+  amount: String!
+  facility: Facility! @connection(name: "FacilityPaymentRecords")
+}
+type Ticket @model @key(name: "byDate", fields: ["date"]) {
+  id: ID!
+  deviceName: String!
+  itemType: String!
+  receiptType: String!
+  fee: String!
+  date: String!
+}

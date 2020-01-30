@@ -1,0 +1,20 @@
+{
+    "jummmis": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-jumm-mis-jummmis-154131-authRole",
+            "UnauthRoleArn": "arn:aws:iam::367770468775:role/amplify-jumm-mis-jummmis-154131-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::367770468775:role/amplify-jumm-mis-jummmis-154131-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-jumm-mis-jummmis-154131-deployment",
+            "UnauthRoleName": "amplify-jumm-mis-jummmis-154131-unauthRole",
+            "StackName": "amplify-jumm-mis-jummmis-154131",
+            "StackId": "arn:aws:cloudformation:us-east-2:367770468775:stack/amplify-jumm-mis-jummmis-154131/cfe7a070-315b-11ea-9da1-0a9bb1cea78e",
+            "AmplifyAppId": "d1v6g0gztmo354"
+        },
+        "categories": {
+            "auth": {
+                "jummmisf2eadfeb": {}
+            }
+        }
+    }
+}

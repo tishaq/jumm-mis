@@ -1,0 +1,427 @@
+/*** general page styles ***/
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 2em;
+  color: var(--headingColor);
+}
+:root {
+  /* theme 1 greener  
+  --light: #faf4f4;
+  --dark: rgb(90, 0, 40);
+  --ligthdark: rgb(243, 219, 234);
+  --headingColor: white;
+  --contentColor: rgb(2, 41, 5);
+*/
+  /* theme 2 dark maron    */
+
+  --light: #faf4f4;
+  --dark: green;
+  --ligthdark: rgba(226, 246, 231, 0.8);
+  --headingColor: rgb(10, 61, 29);
+  --contentColor: rgb(2, 41, 5);
+}
+input,
+select {
+  border: 2px solid var(--dark);
+  padding: 0.3em 1em;
+  border-radius: 40px;
+}
+select,
+select option {
+  border-radius: 40px;
+  padding: 0.5rem 2rem;
+  border: 1px solid var(--dark);
+}
+li,
+a,
+button {
+  text-decoration: none;
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+  font-size: 1.4em;
+}
+.nav__items {
+  list-style-type: none;
+}
+.nav__items li {
+  display: inline-block;
+  padding: 0 20px;
+}
+.nav__items li a {
+  transition: all 0.3s ease 0s;
+}
+.nav__items li a:hover {
+  text-decoration: underline;
+}
+.logout {
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  border-radius: 30px;
+  background-color: var(--dark);
+  border: 1px solid var(--light);
+  transition: all 0.3s ease 0s;
+  margin-left: 20px;
+}
+.logout:hover {
+  background-color: var(--light);
+  border: 1px solid var(--dark);
+  color: var(--contentColor);
+}
+.active {
+  text-decoration: underline;
+}
+
+.mobile__nav {
+  display: none;
+}
+.hamburger {
+  position: absolute;
+  width: 35px;
+  height: 30;
+  top: 14px;
+  right: 10%;
+  z-index: 5;
+  cursor: pointer;
+}
+.hamburger div {
+  position: relative;
+  width: 35px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: var(--light);
+  margin-top: 10px;
+  transition: all 0.3s ease-in-out;
+}
+#toggle {
+  display: none;
+}
+#toggle:checked + .hamburger .hamburger__top {
+  transform: rotate(-45deg);
+  margin-top: 17.5px;
+}
+#toggle:checked + .hamburger .hamburger__meat {
+  transform: rotate(45deg);
+  margin-top: -3px;
+}
+#toggle:checked + .hamburger .hamburger__bottom {
+  transform: scale(0);
+}
+#toggle:checked + .hamburger + .hamburger__nav {
+  top: 0px;
+}
+.hamburger__nav {
+  position: fixed;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  background-color: var(--dark);
+  top: -100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger__nav .hamburger__nav--wrapper {
+  position: relative;
+  overflow-y: auto;
+  height: 100%;
+}
+.hamburger__nav--items {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hamburger__nav--items a {
+  margin-top: 40px;
+  opacity: 1;
+  text-decoration: none;
+  font-size: 46px;
+  letter-spacing: 3px;
+  transition: all 0.3s ease 0s;
+}
+/**** Mobile view **********/
+@media screen and (max-width: 740px) {
+  .mobile__nav {
+    display: inherit;
+  }
+
+  .content > div {
+    grid-column: span 3;
+  }
+  .nav__items,
+  .logout {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .card {
+    grid-column: span 2;
+  }
+}
+/**** end mobile ***/
+.content {
+  display: grid;
+  grid-template-areas:
+    "title title title"
+    ". header ."
+    ". main ."
+    ". partner ."
+    "footer footer footer ";
+  grid-template-columns: 5% 90% 5%;
+}
+.content > div {
+  padding: 1.2rem 4rem;
+}
+.title {
+  grid-area: title;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--dark);
+}
+.card,
+.card-list,
+.card-detail {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--dark);
+  border-radius: 5px;
+}
+.card-title {
+  background-color: var(--dark);
+  padding: 0.6rem 2rem;
+}
+.card-body {
+  display: flex;
+}
+.card-body a,
+.card-body td,
+.card-body th,
+input[type="text"],
+input[type="date"],
+label {
+  color: var(--contentColor);
+}
+
+/*** end general page styles ***/
+/*** home page content styles ****/
+.header {
+  grid-area: header;
+}
+.main {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  background-color: var(--ligthdark);
+  border-radius: 50px;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.partner {
+  grid-area: partner;
+}
+
+/*** end home page content styles ****/
+/** gate page styles **/
+.header .search-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search-items div {
+  justify-self: flex-end;
+  color: var(--contentColor);
+}
+.search-items h1 {
+  justify-items: flex-end;
+}
+.search-items input[type="button"] {
+  background-color: var(--dark);
+  border-radius: 40px;
+  padding: 0.5rem 2rem;
+  border: 1px solid var(--dark);
+  cursor: pointer;
+}
+.search-items input[type="button"]:hover {
+  background-color: var(--light);
+  border: 1px solid var(--dark);
+  cursor: pointer;
+  color: var(--contentColor);
+}
+.card-body table {
+  width: 100%;
+}
+.card-body table tr:nth-child(odd) {
+  background-color: var(--light);
+}
+.card-body table tr td,
+th {
+  font-size: 1.2em;
+  text-align: center;
+}
+/** end gate page styles **/
+/** facility page styles **/
+.facility-summary {
+  margin: auto;
+  padding: 3rem;
+}
+.facility-summary a:hover {
+  text-decoration: underline;
+  font-size: large;
+}
+/** end facility page styles **/
+/** register page styles **/
+.form-item {
+  grid-column: span 2;
+}
+.form-item-button {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+}
+.form-item input,
+select,
+option {
+  width: 100%;
+  color: var(--contentColor);
+}
+.form-item-button input[type="button"] {
+  background-color: var(--dark);
+  border-radius: 40px;
+  padding: 0.5rem 2rem;
+  border: 1px solid var(--dark);
+  cursor: pointer;
+  color: var(--headingColor);
+  margin: 0 auto;
+}
+.form-item-button input[type="button"]:hover {
+  background-color: var(--light);
+  border: 1px solid var(--dark);
+  color: var(--contentColor);
+  cursor: pointer;
+}
+
+/** end register page styles **/
+/** facilityList page styles **/
+.card-list {
+  grid-column: span 2;
+}
+/** end facilityList page styles **/
+/*** facilityDetail page styles **/
+.card-detail {
+  grid-column: span 2;
+}
+.card-detail > .card-body > table td {
+  text-align: left;
+  padding-left: 1.2em;
+}
+/*** end facilityDetail page styles **/
+/*** footer style styles ****/
+.footer {
+  grid-area: footer;
+  display: flex;
+  width: 100%;
+  background-color: var(--dark);
+  color: var(--light);
+}
+.footer p {
+  margin: auto;
+}
+/*** NProgress css ****/
+/* Make clicks pass-through */
+#nprogress {
+  pointer-events: none;
+}
+
+#nprogress .bar {
+  background: var(--dark);
+
+  position: fixed;
+  z-index: 1031;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 2px;
+}
+
+/* Fancy blur effect */
+#nprogress .peg {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px var(--dark), 0 0 5pxvar (--dark);
+  opacity: 1;
+
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  -ms-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* Remove these to get rid of the spinner */
+#nprogress .spinner {
+  display: block;
+  position: fixed;
+  z-index: 1031;
+  top: 15px;
+  right: 15px;
+}
+
+#nprogress .spinner-icon {
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+
+  border: solid 2px transparent;
+  border-top-color: var(--dark);
+  border-left-color: var(--dark);
+  border-radius: 80%;
+
+  -webkit-animation: nprogress-spinner 400ms linear infinite;
+  animation: nprogress-spinner 400ms linear infinite;
+}
+
+.nprogress-custom-parent {
+  overflow: hidden;
+  position: relative;
+}
+
+.nprogress-custom-parent #nprogress .spinner,
+.nprogress-custom-parent #nprogress .bar {
+  position: absolute;
+}
+
+@-webkit-keyframes nprogress-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes nprogress-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

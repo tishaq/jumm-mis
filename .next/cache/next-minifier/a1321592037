@@ -1,0 +1,1 @@
+{"code":"(window.webpackJsonp=window.webpackJsonp||[]).push([[11],{A3lf:function(n,t,e){(window.__NEXT_P=window.__NEXT_P||[]).push([\"/listFacility\",function(){return e(\"mxYR\")}])},mxYR:function(n,t,e){\"use strict\";e.r(t);var i=e(\"q1tI\"),u=e.n(i),o=u.a.createElement;t.default=function(){return o(u.a.Fragment,null,o(\"p\",null,\"Content\"))}}},[[\"A3lf\",0,1]]]);"}
