@@ -1,21 +1,11 @@
 {
-	"auth": {},
-	"hosting": {},
-	"api": {
-		"jummmis": {
-			"service": "AppSync",
+	"auth": {
+		"jummmisf2eadfeb": {
+			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
-			"output": {
-				"authConfig": {
-					"additionalAuthenticationProviders": [],
-					"defaultAuthentication": {
-						"authenticationType": "AMAZON_COGNITO_USER_POOLS",
-						"userPoolConfig": {
-							"userPoolId": "authjummmisf2eadfeb"
-						}
-					}
-				}
-			}
+			"dependsOn": []
 		}
-	}
+	},
+	"hosting": {},
+	"api": {}
 }
