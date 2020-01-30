@@ -1,11 +1,5 @@
 {
-	"auth": {
-		"jummmisf2eadfeb": {
-			"service": "Cognito",
-			"providerPlugin": "awscloudformation",
-			"dependsOn": []
-		}
-	},
+	"auth": {},
 	"hosting": {},
 	"api": {
 		"jummmis": {

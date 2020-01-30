@@ -35,11 +35,14 @@ class Header extends Component {
                 <a>Gate</a>
               </Link>
             </li>
+            <li>
+              <Link href="/remit">
+                <a>Remit</a>
+              </Link>
+            </li>
           </ul>
         </nav>
-        <Link href="#">
-          <button className="logout">Logout</button>
-        </Link>
+
         <div className="mobile__nav">
           <input id="toggle" type="checkbox" />
           <label className="hamburger" htmlFor="toggle">

@@ -4,7 +4,6 @@ import { API, graphqlOperation } from "aws-amplify";
 import * as mutations from "../src/graphql/mutations";
 class addFacility extends Component {
   state = {};
-
   render() {
     const handleChange = e => {
       this.setState({

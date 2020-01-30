@@ -10,11 +10,6 @@
             "StackName": "amplify-jumm-mis-jummmis-154131",
             "StackId": "arn:aws:cloudformation:us-east-2:367770468775:stack/amplify-jumm-mis-jummmis-154131/cfe7a070-315b-11ea-9da1-0a9bb1cea78e",
             "AmplifyAppId": "d1v6g0gztmo354"
-        },
-        "categories": {
-            "auth": {
-                "jummmisf2eadfeb": {}
-            }
         }
     }
 }
